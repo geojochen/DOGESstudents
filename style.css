@@ -84,3 +84,39 @@ c/* Updated Department Standardized Profile Card */
     opacity: 0.8;
     border: 1px solid #3730a3;
 }
+
+/* Persistent Category Navigation */
+.category-menu {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 15px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    position: sticky; /* Keeps the menu at the top during scrolling */
+    top: 0;
+    z-index: 100;
+}
+.category-menu ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+.category-menu a {
+    text-decoration: none;
+    color: #3730a3;
+    font-weight: 500;
+    font-size: 0.9em;
+}
+.category-menu a:hover { text-decoration: underline; }
+
+/* Back to Top link styling */
+.back-to-top {
+    font-size: 0.8em;
+    display: block;
+    margin-bottom: 40px;
+    color: #64748b;
+    text-align: right;
+}
