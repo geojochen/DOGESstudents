@@ -8,6 +8,12 @@
 	
 	<h1>Current Graduate & Undergraduate Students</h1>
     
+	<div id="imageModal" class="modal">
+		<span class="close" onclick="closeModal()">&times;</span>
+		<img class="modal-content" id="fullImage">
+		<div id="caption" style="color: #ccc; text-align: center; margin-top: 10px;"></div>
+    </div>
+	
     <div class="profile-card">
 		<img src="AntonSchmieder.webp" alt="Anton Schmieder" class="headshot">
 
@@ -33,7 +39,7 @@
     </div>
 
     <div class="viz-container">
-        <img src="CampaignFinance.png" alt="Campaign Finance Map" class="visualization">
+        <img src="CampaignFinance.png" alt="Campaign Finance Map" class="visualization" onclick="openModal(this)">
         <p style="font-size: 0.8em; color: #666;">Key Visualization: Campaign Finance Patterns</p>
     </div>
 </div>
@@ -56,7 +62,7 @@
         </div>
 		
 		    <div class="viz-container">
-        <img src="SIheatIsland.png" alt="Staten Island heat island" class="visualization">
+        <img src="SIheatIsland.png" alt="Staten Island heat island" class="visualization" onclick="openModal(this)">
         <p style="font-size: 0.8em; color: #666;">Key Visualization: Staten Island heat island</p>
     </div>
 </div>
@@ -79,7 +85,7 @@
         </div>
 		
 		    <div class="viz-container">
-        <img src="ERworkflow.png" alt="Workflows in emergency response" class="visualization">
+        <img src="ERworkflow.png" alt="Workflows in emergency response" class="visualization" onclick="openModal(this)">
         <p style="font-size: 0.8em; color: #666;">Key Visualization: Workflows in emergency response</p>
     </div>
 </div>
@@ -94,5 +100,8 @@
             link.after(span);
         });
     </script>
+	
+	<script src="enlarge.js"></script>
+	
 </body>
 </html>
