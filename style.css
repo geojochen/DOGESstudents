@@ -1,18 +1,26 @@
-c/* Updated Department Standardized Profile Card */
+/* Department Standardized Profile Card */
+body { 
+    font-family: 'Helvetica', sans-serif; 
+    line-height: 1.6; 
+    color: #333; 
+    max-width: 1200px; 
+    margin: auto; 
+    padding: 20px; 
+}
+
+/* Rigid Grid: 3-column layout (Headshot | Content | Visualization) */
 .profile-card {
     display: grid;
-    /* Three-column layout: Headshot | Content | Visualization */
     grid-template-columns: 200px 1fr 300px; 
-    gap: 25px;
+    gap: 30px;
     border: 1px solid #ddd;
-    padding: 20px;
+    padding: 25px;
     margin-bottom: 30px;
     border-radius: 8px;
-    align-items: start; /* Keeps items aligned to the top */
+    align-items: start;
     background: #fff;
 }
 
-/* Restricting the Headshot */
 .headshot {
     width: 200px;
     height: 250px;
@@ -21,29 +29,48 @@ c/* Updated Department Standardized Profile Card */
     border: 1px solid #eee;
 }
 
-/* Constraining the Visualization to prevent layout breakage */
+.profile-info {
+    min-width: 0; /* Prevents text overflow from breaking the grid */
+}
+
 .viz-container {
-    width: 300px; /* Fixed width slot */
+    width: 300px;
     text-align: center;
 }
 
 .visualization {
     width: 100%;
-    max-height: 200px; /* Rigid vertical limit */
-    object-fit: contain; /* Shows full image without distortion */
+    max-height: 200px;
+    object-fit: contain;
     border: 1px solid #f0f0f0;
-    margin-bottom: 10px;
+    cursor: zoom-in;
 }
 
 .elevator-pitch {
     font-size: 0.95em;
     margin-bottom: 15px;
-    /* Keeps the pitch readable while following the 150-200 word rule */
     max-height: 250px; 
     overflow-y: auto; 
 }
 
-/* Modal (Background) */
+.tech-tag {
+    display: inline-block;
+    background: #e0e7ff;
+    color: #3730a3;
+    padding: 2px 8px;
+    margin: 2px;
+    border-radius: 12px;
+    font-size: 0.85em;
+}
+
+.disclaimer {
+    font-size: 0.75em;
+    color: #666;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Modal Styling */
 .modal {
     display: none; 
     position: fixed; 
@@ -52,19 +79,15 @@ c/* Updated Department Standardized Profile Card */
     width: 100%; height: 100%;
     background-color: rgba(0,0,0,0.9); 
 }
-
-/* Modal Content (The Enlarged Image) */
 .modal-content {
     margin: auto;
     display: block;
     max-width: 90%;
-    max-height: 90%;
+    max-height: 80%;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
 }
-
-/* The Close Button */
 .close {
     position: absolute;
     top: 20px;
@@ -75,16 +98,6 @@ c/* Updated Department Standardized Profile Card */
     cursor: pointer;
 }
 
-/* Visual cue that the image is clickable */
-.visualization {
-    cursor: zoom-in;
-    transition: 0.3s;
-}
-.visualization:hover {
-    opacity: 0.8;
-    border: 1px solid #3730a3;
-}
-
 /* Persistent Category Navigation */
 .category-menu {
     background: #f8fafc;
@@ -92,7 +105,7 @@ c/* Updated Department Standardized Profile Card */
     padding: 15px;
     margin-bottom: 30px;
     border-radius: 8px;
-    position: sticky; /* Keeps the menu at the top during scrolling */
+    position: sticky;
     top: 0;
     z-index: 100;
 }
@@ -104,19 +117,5 @@ c/* Updated Department Standardized Profile Card */
     padding: 0;
     margin: 10px 0 0 0;
 }
-.category-menu a {
-    text-decoration: none;
-    color: #3730a3;
-    font-weight: 500;
-    font-size: 0.9em;
-}
-.category-menu a:hover { text-decoration: underline; }
-
-/* Back to Top link styling */
-.back-to-top {
-    font-size: 0.8em;
-    display: block;
-    margin-bottom: 40px;
-    color: #64748b;
-    text-align: right;
-}
+.category-menu a { text-decoration: none; color: #3730a3; font-weight: 500; font-size: 0.9em; }
+.back-to-top { font-size: 0.8em; display: block; margin-bottom: 40px; color: #64748b; text-align: right; }
