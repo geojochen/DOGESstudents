@@ -1,113 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><link rel="stylesheet" href="style.css"><title>Current Students - DOGES</title></head>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Current Students - DOGES</title>
+</head>
 <body>
     <nav style="margin-bottom: 20px;">
         <a href="index.html" style="text-decoration: none; font-weight: bold; color: #3730a3;">← Return to Department Directory</a>
     </nav>
 	
-	<nav class="category-menu">
-		<strong>Jump to Category:</strong>
-		<ul>
-			<li><a href="#ba-env">BA Environmental Studies</a></li>
-			<li><a href="#ba-geog">BA Geography</a></li>
-			<li><a href="#sds-cert">Spatial Data Science Certificate</a></li>
-			<li><a href="#gis-cert">Post Bacc. GIS Certificate</a></li>
-			<li><a href="#ma-geog">MA Geography</a></li>
-			<li><a href="#ms-geo">MS GeoInformatics</a></li>
-		</ul>
-	</nav>
+    <nav class="category-menu">
+        <strong>Jump to Category:</strong>
+        <ul>
+            <li><a href="#ba-env">BA Environmental Studies</a></li>
+            <li><a href="#ba-geog">BA Geography</a></li>
+            <li><a href="#sds-cert">Spatial Data Science Certificate</a></li>
+            <li><a href="#gis-cert">Post Bacc. GIS Certificate</a></li>
+            <li><a href="#ma-geog">MA Geography</a></li>
+            <li><a href="#ms-geo">MS GeoInformatics</a></li>
+        </ul>
+    </nav>
 	
-	<section id="ma-geog">
-		<h2>MA Geography</h2>
-		
-			<div id="imageModal" class="modal">
-				<span class="close" onclick="closeModal()">&times;</span>
-				<img class="modal-content" id="fullImage">
-				<div id="caption" style="color: #ccc; text-align: center; margin-top: 10px;"></div>
-			</div>
+    <section id="ma-geog">
+        <h2>MA Geography</h2>
 	
-			<div class="profile-card">
-				<img src="AntonSchmieder.webp" alt="Anton Schmieder" class="headshot">
+        <div class="profile-card">
+            <img src="AntonSchmieder.webp" alt="Anton Schmieder" class="headshot">
+            <div class="profile-info">
+                <h2>Anton Schmieder</h2>
+                <p><strong>Email:</strong> antonschmieder06@myhunter.cuny.edu</p>
+                <div class="elevator-pitch">
+                    <strong>Elevator Pitch:</strong> My research focuses on social geography and equity through spatial data analysis. 
+                    My primary project, the Campaign Finance Explorer, transforms FEC data into interactive visualizations...
+                </div>
+                <div class="tech-stack">
+                    <strong>Technical Stack:</strong> 
+                    <span class="tech-tag">Node.js</span> <span class="tech-tag">D3.js</span> <span class="tech-tag">JavaScript</span>
+                </div>
+                <a href="https://campaign-finance-explorer.onrender.com/" class="external-link">Project Website</a>
+            </div>
+            <div class="viz-container">
+                <img src="CampaignFinance.png" alt="Campaign Finance Map" class="visualization" onclick="openModal(this)">
+                <p style="font-size: 0.8em; color: #666;">Key Visualization: Campaign Finance Patterns</p>
+            </div>
+        </div>
+        <a href="#" class="back-to-top">↑ Back to Category Menu</a>
+    </section>
 
-				<div class="profile-info">
-					<h2>Anton Schmieder</h2>
-					<p><strong>Email:</strong> antonschmieder06@myhunter.cuny.edu</p>
-        
-					<div class="elevator-pitch">My research focuses on social geography and equity through spatial data analysis. 
-                My primary project, the Campaign Finance Explorer, is a full-stack web application that transforms FEC data into 
-                interactive visualizations. It uses D3.js and choropleth maps to make fundraising patterns accessible to the public, 
-                promoting transparency in democratic governance.
-					</div>
+    <section id="ba-geog">
+        <h2>BA Geography</h2>
+        <div class="profile-card">
+            <img src="SarahChen.jpg" alt="Sarah Chen" class="headshot">
+            <div class="profile-info"> <h2>Sarah Chen</h2>
+                <p><strong>Email:</strong> sarah.chen01@myhunter.cuny.edu</p>
+                <div class="elevator-pitch">Detailed elevator pitch regarding urban heat island effects in Staten Island...</div>
+                <div class="tech-stack">
+                    <strong>Technical Stack:</strong> <span class="tech-tag">QGIS</span> <span class="tech-tag">Python</span>
+                </div>
+                <a href="https://linkedin.com/in/sarahchen" class="external-link">LinkedIn Profile</a>
+            </div>
+            <div class="viz-container">
+                <img src="SIheatIsland.png" alt="Staten Island heat island" class="visualization" onclick="openModal(this)">
+                <p style="font-size: 0.8em; color: #666;">Key Visualization: Staten Island heat island</p>
+            </div>
+        </div>
+        <a href="#" class="back-to-top">↑ Back to Category Menu</a>
+    </section>
 
-					<div class="tech-stack">
-						<strong>Technical Stack:</strong> 
-						<span class="tech-tag">Node.js</span> 
-						<span class="tech-tag">D3.js</span> 
-						<span class="tech-tag">JavaScript</span>
-					</div>
-        
-					<a href="https://campaign-finance-explorer.onrender.com/" class="external-link">Project Website</a>
-				</div>
+    <section id="ba-env"><h2>BA Environmental Studies</h2><p>Profiles coming soon.</p></section>
+    <section id="sds-cert"><h2>Spatial Data Science Certificate</h2><p>Profiles coming soon.</p></section>
+    <section id="gis-cert"><h2>Post Baccalaureate GIS Certificate</h2><p>Profiles coming soon.</p></section>
+    <section id="ms-geo"><h2>MS GeoInformatics</h2><p>Profiles coming soon.</p></section>
 
-				<div class="viz-container">
-					<img src="CampaignFinance.png" alt="Campaign Finance Map" class="visualization" onclick="openModal(this)">
-					<p style="font-size: 0.8em; color: #666;">Key Visualization: Campaign Finance Patterns</p>
-				</div>
-			</div>
-    
-			<div class="profile-card">
-				<img src="SarahChen.jpg" alt="Sarah Chen" class="headshot">
-				<div>
-					<h2>Sarah Chen</h2>
-					<p><strong>Email:</strong> sarah.chen01@myhunter.cuny.edu</p>
-			
-					<div class="elevator-pitch">Detailed elevator pitch regarding urban heat island effects in Staten Island... (150-200 words required).
-					</div>
-			
-					<div class="tech-stack">
-						<strong>Technical Stack:</strong> 
-						<span class="tech-tag">QGIS</span> 
-						<span class="tech-tag">Python</span>
-					</div>
-				<a href="https://linkedin.com/in/sarahchen" class="external-link">LinkedIn Profile</a>
-				</div>
-		
-				<div class="viz-container">
-					<img src="SIheatIsland.png" alt="Staten Island heat island" class="visualization" onclick="openModal(this)">
-					<p style="font-size: 0.8em; color: #666;">Key Visualization: Staten Island heat island</p>
-				</div>
-			</div>
-
-			<div class="profile-card">
-				<img src="MarcusThorne.jpg" alt="Marcus Thorne" class="headshot">
-				<div>
-					<h2>Marcus Thorne</h2>
-					<p><strong>Email:</strong> m.thorne@hunter.cuny.edu</p>
-			
-					<div class="elevator-pitch">Focusing on automating GIS workflows for emergency response... (150-200 words required).
-					</div>
-			
-					<div class="tech-stack">
-						<strong>Technical Stack:</strong> 
-						<span class="tech-tag">PostGIS</span> 
-						<span class="tech-tag">R</span>
-					</div>
-				<a href="https://mthorne.github.io" class="external-link">Web Portfolio</a>
-				</div>
-		
-				<div class="viz-container">
-					<img src="ERworkflow.png" alt="Workflows in emergency response" class="visualization" onclick="openModal(this)">
-					<p style="font-size: 0.8em; color: #666;">Key Visualization: Workflows in emergency response</p>
-				</div>
-			</div>
-
-		<a href="#" class="back-to-top">↑ Back to Category Menu</a>
-	</section>
-	
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="fullImage">
+        <div id="caption" style="color: #ccc; text-align: center; margin-top: 10px;"></div>
+    </div>
 
     <script>
-        // Automated Disclaimer Script
+        // Automated Disclaimer Requirement [cite: 314, 413]
         const disclaimerText = "This link leads to an external website not hosted by the University. The views expressed are those of the student.";
         document.querySelectorAll('.external-link').forEach(link => {
             const span = document.createElement('span');
@@ -116,8 +88,6 @@
             link.after(span);
         });
     </script>
-	
-	<script src="enlarge.js"></script>
-	
+    <script src="enlarge.js"></script>
 </body>
 </html>
