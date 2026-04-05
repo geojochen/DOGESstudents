@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link rel="stylesheet" href="style.css"><title>Current Students - DOGES</title></head>
+<body>
+    <h1>Current Graduate & Undergraduate Students</h1>
+    
+    <div class="profile-card">
+        <img src="schmieder_headshot.jpg" alt="Anton Schmieder" class="headshot">
+        <div>
+            <h2>Anton Schmieder</h2>
+            <p><strong>Email:</strong> antonschmieder06@myhunter.cuny.edu [cite: 438]</p>
+            <div class="elevator-pitch">
+                <strong>Elevator Pitch:</strong> My research focuses on social geography and equity through spatial data analysis. 
+                My primary project, the Campaign Finance Explorer, is a full-stack web application that transforms FEC data into 
+                interactive visualizations. It uses D3.js and choropleth maps to make fundraising patterns accessible to the public, 
+                promoting transparency in democratic governance[cite: 438, 440, 444].
+            </div>
+            <div class="tech-stack">
+                <strong>Technical Stack:</strong> 
+                <span class="tech-tag">Node.js</span> <span class="tech-tag">D3.js</span> <span class="tech-tag">JavaScript</span> [cite: 441, 457]
+            </div>
+            <img src="fec_map.png" alt="Campaign Finance Map" class="visualization">
+            <a href="https://github.com/aschmieder" class="external-link">GitHub Portfolio</a>
+        </div>
+    </div>
+
+    <div class="profile-card">
+        <div class="headshot" style="display:flex;align-items:center;justify-content:center;">Photo Placeholder</div>
+        <div>
+            <h2>Sarah Chen</h2>
+            <p><strong>Email:</strong> sarah.chen01@myhunter.cuny.edu</p>
+            <div class="elevator-pitch">Detailed elevator pitch regarding urban heat island effects in Staten Island... (150-200 words required)[cite: 373, 402].</div>
+            <div class="tech-stack"><strong>Technical Stack:</strong> <span class="tech-tag">QGIS</span> <span class="tech-tag">Python</span></div>
+            <a href="https://linkedin.com/in/sarahchen" class="external-link">LinkedIn Profile</a>
+        </div>
+    </div>
+
+    <div class="profile-card">
+        <div class="headshot" style="display:flex;align-items:center;justify-content:center;">Photo Placeholder</div>
+        <div>
+            <h2>Marcus Thorne</h2>
+            <p><strong>Email:</strong> m.thorne@hunter.cuny.edu</p>
+            <div class="elevator-pitch">Focusing on automating GIS workflows for emergency response... (150-200 words required)[cite: 373, 402].</div>
+            <div class="tech-stack"><strong>Technical Stack:</strong> <span class="tech-tag">PostGIS</span> <span class="tech-tag">R</span></div>
+            <a href="https://mthorne.github.io" class="external-link">Web Portfolio</a>
+        </div>
+    </div>
+
+    <script>
+        // Automated Disclaimer Script [cite: 29, 314, 412]
+        const disclaimerText = "This link leads to an external website not hosted by the University. The views expressed are those of the student.";
+        document.querySelectorAll('.external-link').forEach(link => {
+            const span = document.createElement('span');
+            span.className = 'disclaimer';
+            span.innerText = disclaimerText;
+            link.after(span);
+        });
+    </script>
+</body>
+</html>
